@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
@@ -8,13 +9,13 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Welcome</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">Deloitte</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/users">Demo</Link>
             </li>
           </ul>
         </nav>
@@ -23,13 +24,13 @@ export default function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/about">
-            <About />
+            <Deloitte />
           </Route>
           <Route path="/users">
-            <Users />
+            <Demo />
           </Route>
           <Route path="/">
-            <Home />
+            <Welcome />
           </Route>
         </Switch>
       </div>
@@ -37,14 +38,14 @@ export default function App() {
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
+function Welcome() {
+  return <h2>Welcome</h2>;
 }
 
-function About() {
-  return <h2>About</h2>;
+function Deloitte() {
+  return <h2>Deloitte</h2>;
 }
 
-function Users() {
-  return <h2>Users</h2>;
+function Demo() {
+  return <h2>Demo</h2>;
 }
