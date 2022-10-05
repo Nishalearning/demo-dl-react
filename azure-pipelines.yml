@@ -29,8 +29,8 @@ steps:
 
 - script: |
     pushd $(uiSource)
-    npm install
-    npm run build
+    sudo npm install
+    sudo npm run build
     popd
   displayName: 'npm install and build'
 
